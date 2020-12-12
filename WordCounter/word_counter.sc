@@ -29,7 +29,7 @@ def frequencies(data: List[String], func: (Seq[(String, Int)], (Seq[(String, Int
 // recebido, com exceção daqueles que estão no stop_words.txt.
 def remove_stop_words(data: Array[String], func: (List[String], (Seq[(String, Int)], (Seq[(String, Int)], (() => Unit) => Unit) => Unit) => Unit) => Unit): Unit = {
   println("Executando remove_stop_words")
-  var stop_words = scala.io.Source.fromFile("C:\\Users\\Felipe\\Desktop\\WordCounter\\stop_words.txt").mkString
+  var stop_words = scala.io.Source.fromFile("C:\\Users\\Família\\Desktop\\TP2-kickforward-main\\TP2-kickforward-main\\WordCounter\\top_words.txt").mkString
   stop_words = stop_words.replaceAll("[^A-Za-z0-9 ]", " ")
   val stop_words_list = stop_words.split(" +")
   var new_data = List.empty[String]
@@ -78,4 +78,4 @@ def read_file(path: String, func: (String, (String, (String, (Array[String], (Li
 }
 
 println("Iniciando o programa")
-read_file("C:\\Users\\Felipe\\Desktop\\WordCounter\\text.txt", filter_chars)
+read_file("C:\\Users\\Família\\Desktop\\TP2-kickforward-main\\TP2-kickforward-main\\WordCounter\\text.txt", filter_chars)
